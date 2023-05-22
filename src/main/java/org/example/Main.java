@@ -1,6 +1,5 @@
 package org.example;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,15 +10,15 @@ public class Main {
         System.out.println("-----------------------------");
         listaNume.stream()
                 .filter(nume -> nume.length() < 4)
-                .forEach(nume -> System.out.println(nume));
+                .forEach(System.out::println);
 
 
         //map
         System.out.println("-----------------------------");
         listaNume.stream()
                 .filter(nume -> nume.length() > 5)
-                .map(nume -> nume.length())
-                .forEach(nume -> System.out.println(nume));
+                .map(String::length)
+                .forEach(System.out::println);
 
         System.out.println("-----------------------------");
 
